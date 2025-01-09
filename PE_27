@@ -1,0 +1,13 @@
+from sympy import primerange, isprime
+def pe27():
+  primeinrow, res = 0, 0
+  for b in primerange(1000):
+    for a in range(-999, 1001, 2):
+      for n in range(b+1):
+        if not isprime(n**2 + a*n + b):
+          if n > primeinrow:
+            primeinrow, ans = n, a * b
+          break
+  return ans
+
+print(pe27())
