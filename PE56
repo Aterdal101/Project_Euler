@@ -1,0 +1,12 @@
+import math
+
+maxsum = 0
+
+for a in range(1,101):
+  for b in range(1,101):
+    num = [int(i) for i in str(a**b)]
+    if sum(num) > maxsum:
+      maxsum = sum(num)
+
+
+print(maxsum)
