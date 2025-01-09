@@ -1,0 +1,18 @@
+def sol():
+  count = []
+  for n in range(1,10):
+      for i in range(1,22):
+          if i == len(str(n**i)):
+              count.append(n**i) 
+  return len(count)
+
+def find_bound(x):
+  i = 1
+  while True:
+      if i > len(str(x**i)):
+          break
+      else:
+          i += 1
+  return i
+
+print(sol())
